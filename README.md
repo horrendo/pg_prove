@@ -16,6 +16,7 @@ Digest: sha256:000bc7c42fc478a1d3dbf14a17c7b1963e8559cf49e8c6d29c2b0f0e12c38029
 Status: Downloaded newer image for horrendo/pg_prove:latest
 ```
 
+&nbsp;
 Now we'll tag it as just `pg_prove` to save keystrokes when we run:
 
 ```bash
@@ -25,9 +26,10 @@ horrendo/pg_prove  latest  5f2a913451dc   19 hours ago   49.7MB
 pg_prove           latest  5f2a913451dc   19 hours ago   49.7MB
 ```
 
+&nbsp;
 We'll create a file of environment variables (we could specify them on the `docker run` command line but this is easier):
 
-```
+```bash
 [~/git/pg_prove]$ cat env.dat
 PGHOST=192.168.101.144
 PGDATABASE=bcaas
@@ -35,6 +37,7 @@ PGUSER=bcaas_owner
 PGPASSWORD=xxx
 ```
 
+&nbsp;
 Now run the image, mounting the current directory as /tmp (which is the working directory of the docker image):
 
 ```bash
